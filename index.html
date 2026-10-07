@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QR Student Attendance System</title>
+
+    <!-- QR Scanner Library -->
+    <script src="https://unpkg.com/html5-qrcode"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+    <h1>QR Student Attendance</h1>
+
+
+    <!-- =================================
+         STUDENT INFORMATION
+    ================================= -->
+
+    <h3>Student Information</h3>
+
+    <input
+        type="text"
+        id="studentId"
+        placeholder="Student ID"
+    >
+
+    <input
+        type="text"
+        id="studentName"
+        placeholder="Student Name"
+    >
+
+    <input
+        type="text"
+        id="course"
+        placeholder="Course"
+    >
+
+    <br>
+
+    <button onclick="generateQR()">
+        Generate Attendance QR
+    </button>
+
+
+    <!-- =================================
+         GENERATED QR CODE
+    ================================= -->
+
+    <div id="qrCode"></div>
+
+    <button
+        id="saveQR"
+        onclick="saveQRCode()">
+
+        Save QR Code
+
+    </button>
+
+
+    <hr>
+
+
+    <!-- =================================
+         QR SCANNER
+    ================================= -->
+
+    <h2>Scan Attendance QR</h2>
+
+    <p>
+        Click the button and allow camera access.
+    </p>
+
+    <button onclick="startScanner()">
+        Start QR Scanner
+    </button>
+
+    <div id="reader"></div>
+
+
+    <!-- =================================
+         SCANNED RESULT
+    ================================= -->
+
+    <div id="scannedResult"></div>
+
+
+    <hr>
+
+
+    <!-- =================================
+         ATTENDANCE RECORDS
+    ================================= -->
+
+    <h2>Attendance Records</h2>
+
+    <div class="table-container">
+
+        <table id="attendanceTable">
+
+            <thead>
+
+                <tr>
+
+                    <th>#</th>
+
+                    <th>Student ID</th>
+
+                    <th>Student Name</th>
+
+                    <th>Course</th>
+
+                    <th>Date</th>
+
+                    <th>Time</th>
+
+                    <th>Status</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="records">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+</div>
+</body>
+
+</html>

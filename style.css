@@ -1,0 +1,147 @@
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            margin: 0;
+            padding: 16px;
+        }
+
+        .container {
+            background: white;
+            width: 600px;
+            max-width: 100%;
+            margin: auto;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        /* =========================
+           INPUTS
+        ========================= */
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 6px;
+            box-sizing: border-box;
+        }
+
+        /* =========================
+           BUTTONS
+        ========================= */
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+
+        /* =========================
+           QR CODE
+        ========================= */
+
+        #qrCode {
+            margin-top: 20px;
+        }
+
+        #qrCode img {
+            width: 250px;
+            height: 250px;
+        }
+
+        #saveQR {
+            display: none;
+        }
+
+        /* =========================
+           QR SCANNER
+        ========================= */
+
+        #reader {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        /* =========================
+           SCANNED RESULT
+        ========================= */
+
+        #scannedResult {
+            background: #e8f5e9;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 5px;
+            text-align: left;
+        }
+
+        /* =========================
+           ATTENDANCE TABLE
+        ========================= */
+
+        .table-container {
+            width: 100%;
+            margin-top: 20px;
+            overflow: hidden;
+        }
+
+        table {
+            width: 100%;
+            table-layout: fixed;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        th,
+        td {
+            border: 1px solid #999;
+            padding: 7px 4px;
+            text-align: center;
+            white-space: normal;
+            overflow-wrap: break-word;
+            font-size: 13px;
+        }
+
+        th {
+            background: #d9eaf7;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background: #f5f5f5;
+        }
+
+        .status-present {
+            font-weight: bold;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 640px) {
+
+            .container {
+                padding: 16px;
+            }
+
+            th,
+            td {
+                padding: 5px 2px;
+                font-size: 11px;
+            }
+
+            input {
+                width: 100%;
+            }
+
+            button {
+                width: auto;
+            }
+
+        }
